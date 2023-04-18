@@ -1,0 +1,425 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+    scroll-behavior: smooth;
+  }
+  
+/* General Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+/* Header Styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: 'Sedgwick Ave Display', cursive , sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: darkgoldenrod;
+}
+
+header .fa-xmark {
+  display: none;
+}
+header .fa-xmark.show {
+  display: block;
+}
+header .fa-bars.none{
+  display: none;
+}
+.dropdown-content{
+  position: absolute;
+  right: 0px;
+  top: 63px;
+  width: 196px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  height: 0;
+  display: none;
+}
+.dropdown-content a{
+  color: white;
+  text-decoration: none;
+}
+.dropdown-content a:hover{
+  color: darkgoldenrod;
+}
+.dropdown-content li {
+  margin: 1em 0;
+}
+.dropdown-content.show{
+  height: auto;
+  display: flex;
+}
+
+/* Hero Styles */
+
+.hero {
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('https://images.unsplash.com/photo-1594377160182-cdebf2d41da5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+/*Hides the overflow of the wave*/
+main{
+    overflow: hidden;
+}
+
+/*Wave Seperator*/
+.wave-container {
+    position: relative;
+    background: #333;
+    height: 15vh;
+}
+  
+  .wave {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    background: #333;
+    bottom: 0;
+  }
+  
+  .wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    z-index: 1;
+  }
+  
+  .wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #f4f4f4;
+    right: -1.5%;
+    top: 60%;
+    z-index: 1;
+  }
+  .wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: #333;
+    left: -1.5%;
+    top: 40%;
+  }
+
+/*About Us*/
+
+.aboutUs-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutUs-container h2 {
+  font-size: 2.5em;
+  z-index: 1;
+  margin: 1em 0;
+}
+
+.aboutUs-container p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 900px;
+}
+
+/* Services Styles */
+
+.services {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5em;
+  margin: 2em 0 1em 0;
+}
+
+.service-boxes {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-box {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0 10px;
+}
+
+.service-box img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.service-box p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+/*Gallery Styles*/
+.gallery-container{
+    text-align: center;
+    padding: 4em 0;
+    border: 30px solid black;
+}
+.gallery-container h2{
+  margin: 1em 0 1em 0;
+  font-size: 3em;
+}
+.gallery{
+    /*For tablet or mobile to have margin you have to decrease the max-wdith*/
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+
+}
+.gallery img {
+    max-width: 100%;
+    border-radius: 10%;
+}
+/*Triangle Seperator*/
+.triangle {
+    position: relative;
+    background: #333;
+    height: 15vh;
+}
+  
+.triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 100px 0 100px;
+    border-color: #333 transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+}
+/*Footer Styles */
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+    padding: 50px 0;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-around;
+}
+  
+  .footer-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 1em 0 0;
+  }
+  
+  .footer-location {
+    margin-bottom: 10px;
+  }
+  
+  .footer-phone {
+    margin-bottom: 20px;
+  }
+  
+  .footer-social-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  
+  .footer-social-list li:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  .footer-social-list a {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .footer-social-list a:hover {
+    color: #d1d1d1;
+  }
+  
+  .footer-copyright {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .footer-offers h3{
+    font-size: 24px;
+    margin: 1em 0 0;
+  }
+  .email-container{
+    display: flex;
+    margin-top: 1em;
+  }
+  .email-container input {
+    padding: .5em;
+    padding: 0.5em;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-right: none;
+  }
+  .email-container button {
+    padding: .5em;
+    border: 1px solid darkgoldenrod;
+    background-color: transparent;
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  .email-container input[type="text"] {
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  /*MEDIA QUERIES*/
+@media (min-width: 700px){
+  header .fa-bars  {
+    display: none;
+  }
+  header .fa-xmark.show{
+    display: none;
+  }
+  header .dropdown-content.show{
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  header nav{
+    display: none;
+  }
+}
