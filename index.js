@@ -15,3 +15,6 @@ xmark.addEventListener("click", () => {
     xmark.classList.toggle("show");
 })
 /*DROPDOWN CONTENT */
+
+
+/*DELETES COPYRIGHT AT SCREEN WIDTH OF 500PX */
